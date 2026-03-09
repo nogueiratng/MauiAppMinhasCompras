@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 using MauiAppMinhasCompras.Models;
 using System.Threading.Tasks;
 
+=======
+>>>>>>> fd04fca7bd29b75a4532fe3b6690102664185527
 namespace MauiAppMinhasCompras.Views;
 
 public partial class NovoProduto : ContentPage
@@ -9,6 +12,7 @@ public partial class NovoProduto : ContentPage
 	{
 		InitializeComponent();
 	}
+<<<<<<< HEAD
 
     private async void ToolbarItem_Clicked(object sender, EventArgs e)
     {
@@ -30,4 +34,6 @@ public partial class NovoProduto : ContentPage
 			await DisplayAlert("Ops", ex.Message, "OK");
 		}
     }
+=======
+>>>>>>> fd04fca7bd29b75a4532fe3b6690102664185527
 }
