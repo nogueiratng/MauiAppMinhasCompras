@@ -6,7 +6,6 @@ public partial class ListaProduto : ContentPage
 	{
 		InitializeComponent();
 	}
-<<<<<<< HEAD
 
     private void ToolbarItem_Clicked(object sender, EventArgs e)
     {
@@ -19,6 +18,4 @@ public partial class ListaProduto : ContentPage
 			DisplayAlert("Ops!", ex.Message, "OK");
 		}
     }
-=======
->>>>>>> fd04fca7bd29b75a4532fe3b6690102664185527
 }
