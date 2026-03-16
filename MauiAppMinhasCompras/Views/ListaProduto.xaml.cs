@@ -1,4 +1,5 @@
 using MauiAppMinhasCompras.Models;
+using SQLitePCL;
 using System.Collections.ObjectModel;
 
 namespace MauiAppMinhasCompras.Views;
@@ -53,8 +54,25 @@ public partial class ListaProduto : ContentPage
 		DisplayAlert("Total dos Produtos", msg, "OK");
 	}
 
-	private void MenuItem_Clicked(object sender, EventArgs e) 
+	private async void MenuItem_Clicked(object sender, EventArgs e) 
 	{
-		
+		try
+		{
+			MenuItem Selecionado = sender as MenuItem;
+
+			Produto p = Selecionado.BindingContext as Produto;
+
+            bool confirm = await DisplayAlert("Tem Certeza?", "Remover Produto?", "SIM", "NÃO");
+
+			if (confirm) 
+			{
+				await App.Db.Delete(p.Id);
+				lista.Remove(p);
+			}
+		}
+		catch (Exception ex)
+		{
+			DisplayAlert("Ops", ex.Message, "OK");
+		}
 	}
 }
