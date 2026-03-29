@@ -23,7 +23,9 @@
                    Margin="-15,0,0,0"
                    Placeholder="Busca de Produtos" 
 				   TextChanged="txt_search_TextChanged"/>
-    
+
+        <Button Text="Abrir Relatório" Clicked="AbrirRelatorio_Clicked" />
+
         <Frame Padding="0" Margin="10" VerticalOptions="FillAndExpand">
             <ListView x:Name="lst_produtos"
                   IsPullToRefreshEnabled="True"
